@@ -39,4 +39,21 @@ function ModuleRoutes(app) {
     res.send(modules);
   });
 }
+
+/*   app.post("/api/modules", (req, res) => {
+    const { cid } = req.params;
+    const newModule = {
+      ...req.body,
+      course: cid,
+      _id: new Date().getTime().toString(),
+    };
+    db.modules.push(newModule);
+  });
+
+  // 4.2.1
+  app.get("/api/modules", (req, res) => {
+    const modules = Database.modules;
+    res.send(modules);
+  }); */
+
 export default ModuleRoutes;
